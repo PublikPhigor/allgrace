@@ -3,6 +3,7 @@ const mobileNav = document.querySelector('.mobile-navbar');
 const openNavBtn = document.querySelector('.burger');
 const closeNavBtn = document.querySelector('.close-navbar-btn');
 const overlay = document.querySelector('.overlay');
+const header = document.querySelector('header')
 
 openNavBtn.addEventListener('click', () => {
     mobileNav.classList.add('active');
@@ -24,12 +25,34 @@ dropdownBtn.addEventListener('click', () => {
 
 //fixed header 
 const mobileHeader = document.querySelector('.mobile-header');
-window.onscroll = () => {myFunction()};
+const slider = document.querySelector('.slide-container');
+const current = document.querySelector('.current');
+const navbarList = document.querySelectorAll('.navbar-list a');
+const dropDownList = document.querySelectorAll('.drop-menu a');
 
-const myFunction = () => {
-    if ((document.body.scrollTop > 200) || (document.documentElement.scrollTop > 200)) {
-        mobileHeader.classList.add('fixed');
-    } else {
-        mobileHeader.classList.remove('fixed');
-    }
-};
+const slideObserverOptions = {};
+const slideObserver = new IntersectionObserver((entires, slideObserver) => {
+    entires.forEach(entry => {
+        if(!entry.isIntersecting) {
+            header.classList.add('active');
+            current.classList.add('active');
+            navbarList.forEach(listItem => {
+                listItem.classList.add('active');
+            });
+            dropDownList.forEach(dropDownList => {
+                dropDownList.classList.add('active');
+            });
+        } else {
+            header.classList.remove('active');
+            current.classList.remove('active');
+            navbarList.forEach(listItem => {
+                listItem.classList.remove('active');
+            });
+            dropDownList.forEach(dropDownList => {
+                dropDownList.classList.remove('active');
+            });
+        }
+    });
+}, slideObserverOptions);
+
+slideObserver.observe(slider);
