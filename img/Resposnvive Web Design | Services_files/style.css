@@ -1,0 +1,332 @@
+/* global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background: #fff;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    font-weight: bolder;
+}
+    .btn:hover {
+        background: #10b60b;
+        color: #fff;
+    }
+
+/* header */
+#header {
+    background: #ccc;
+    border-bottom: 4px solid #10b606;
+}
+
+    #header li {
+        display: inline-flex;
+        padding-right: 15px;
+    }
+
+    #header .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header nav {
+        margin-top: 20px;
+    }
+
+    #header a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+
+    #header .current a, h1 span {
+        color: #10b60b;
+    }
+
+    #header a:hover {
+        font-weight: bolder;
+        color: #fff;
+    }
+
+    #logo h1{
+        font-size: 2.2rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    #logo p {
+        margin-top: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+/* showcase */
+#showcase {
+    background: #000;
+    color: #fff;
+    min-height: 400px;
+}
+
+    #showcase h1 {
+        margin-top: 130px;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    #showcase p {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+
+/* newsletter */
+#newsletter {
+    background: #ccc;
+}
+
+    #newsletter .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #newsletter form {
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+
+    #newsletter form input{
+        padding: 0.5rem;
+        width: 15rem;
+    }
+
+/* cards */
+#cards .container {
+    display: flex;
+    justify-content: space-evenly;
+}
+    #cards {
+        margin: 20px 0;
+    }
+    .card {
+        text-align: center;
+    }
+
+    /* font awesome icons */
+    .fab, .fa {
+    font-size: 4rem;
+    }
+
+/* main */
+.about-us{
+    max-width: 60%;
+    text-align: center;
+    float: left;
+    margin-top: 0;
+}
+
+    .about-us h1 {
+        background: #ccc;
+        padding: 10px;
+    }
+
+/* sidebar */
+.sidebar
+    {
+        max-width: 25%;
+        float: right;
+        background: #ccc;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+
+/* services */
+.services-box {
+    max-width: 60%;
+    float: left;
+}
+
+    .services {
+        font-size: 18px;
+        background: #ccc;
+        padding: 20px;
+        margin-bottom: 5px;
+    }
+
+    .services-box h1 {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+
+/* form */
+.my-form label, .my-form input{
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+/* footer */
+footer {
+    background: #ccc;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-top: 4px solid #10b606;
+    margin-top: 2rem;
+}
+
+
+/* media queries */
+@media(max-width:768px){
+    body {
+        font-size: 0.8rem;
+    }
+
+    /* header */
+
+    #header li {
+        display: inline-flex;
+        padding-right: 15px;
+    }
+
+        #header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #header nav {
+            margin-top: 5px;
+        }
+
+        #logo h1 {
+            font-size: 2rem;
+        }
+
+        #header ul {
+            padding: 0;
+        }
+
+
+    /* showcase */
+    #showcase {
+        padding: 0;
+        min-height: 280px;
+    }
+
+        #showcase h1 {
+            margin-top: 70px;
+            font-size: 2.0rem;
+            text-align: center;
+        }
+
+        #showcase p {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 60px;
+        }
+
+    /* newsletter */
+    #newsletter .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        #newsletter h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        #newsletter form {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 2rem;
+        }
+
+        #newsletter form input{
+            padding: 0.5rem;
+            width: 90%;
+        }
+
+        .btn {
+            width: 95%;
+            margin-bottom: 20px;
+        }
+    
+    /* cards */
+    #cards .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        #cards {
+            margin: 30px 0;
+        }
+        .card {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+    /* main */
+    .about-us{
+        max-width: 90%;
+        text-align: center;
+        float: none;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    /* sidebar */
+    .sidebar
+        {
+            font-size: 15px;
+            max-width: 90%;
+            float: none;
+            padding: 10px;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+
+    /* services */
+    .services-box {
+        margin: auto;
+        max-width: 90%;
+        float: none;
+    }
+
+        .services {
+            font-size: 15px;
+            padding: 20px;
+            margin-bottom: 5px;
+        }
+
+        .services-box h1 {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0;
+        }
+}

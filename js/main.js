@@ -3,7 +3,8 @@ const mobileNav = document.querySelector('.mobile-navbar');
 const openNavBtn = document.querySelector('.burger');
 const closeNavBtn = document.querySelector('.close-navbar-btn');
 const overlay = document.querySelector('.overlay');
-const header = document.querySelector('header')
+const header = document.querySelector('header');
+const scrollBtn = document.querySelector('#scroll-to-top');
 
 openNavBtn.addEventListener('click', () => {
     mobileNav.classList.add('active');
@@ -42,6 +43,7 @@ const slideObserver = new IntersectionObserver((entires, slideObserver) => {
             dropDownList.forEach(dropDownList => {
                 dropDownList.classList.add('active');
             });
+            scrollBtn.classList.add('active');
         } else {
             header.classList.remove('active');
             current.classList.remove('active');
@@ -51,6 +53,7 @@ const slideObserver = new IntersectionObserver((entires, slideObserver) => {
             dropDownList.forEach(dropDownList => {
                 dropDownList.classList.remove('active');
             });
+            scrollBtn.classList.remove('active');
         }
     });
 }, slideObserverOptions);
