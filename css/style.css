@@ -459,7 +459,7 @@ header {
         width: 100%;
         position: absolute;
         content: "";
-        background: url('/img/ruler.png') repeat-x;
+        background: url('../img/ruler.png') repeat-x;
         height: 20px;
         top: -15px;
     }
@@ -467,7 +467,7 @@ header {
         width: 100%;
         position: absolute;
         content: "";
-        background: url('/img/ruler.png') repeat-x;
+        background: url('../img/ruler.png') repeat-x;
         height: 20px;
         bottom: -15px;
     }
@@ -578,7 +578,7 @@ header {
 
 /* ==== ABOUT PAGE */
 .about-landing {
-    background-image: url('/img/1.jpg');
+    background-image: url('../img/1.jpg');
     width: 100%;
     height: 100%;
     padding: 200px 0;
@@ -748,7 +748,7 @@ header {
 /* ==== counter section ==== */
 .counter {
     height: 400px;
-    background-image: url('/img/counter-bg.jpg');
+    background-image: url('../img/counter-bg.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -967,7 +967,7 @@ footer {
         height: 80px;
         top: -80px;
         content: "";
-        background: url('/img/footer.png') no-repeat;
+        background: url('../img/footer.png') no-repeat;
         background-size: cover;
         left: 0;
         right: 0;
