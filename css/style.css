@@ -292,15 +292,19 @@ header {
     }
 }
 /* image slide - landing page */
+.lp {
+    width: 100%;
+    overflow: hidden;
+}
 .slide-container {
     align-items: center;
     justify-content: center;
     margin: auto;
     height: 55vh;
-    width: 100%;
     box-sizing: border-box;
-    overflow: hidden !important;
     position: relative;
+    width: 300%;
+    overflow: hidden;
 }
 .main-slide {
     height: 80vh;
@@ -308,16 +312,11 @@ header {
 .slide {
     position: relative;
     height: 80vh;
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 33.33%;
+    max-width: 33.33%;
     padding: 25vh 0;
     color: #fff;
-    transform: translateX(100%);
 }
-    .slide.active {
-        transform: translateX(0);
-        transition: transform 0.5s ease;
-    }
     .slide-1 {
         background-image: url("../img/1.jpg");
         background-position: center;
